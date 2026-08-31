@@ -1,7 +1,5 @@
-book_ID,ID,number,createdAt,createdBy,modifiedAt,modifiedBy
-12846827-a20a-492b-acc0-f19beb785527,17691705-0a3f-4b35-b9df-f23925a69a9e,29,2015-08-18T00:00:00.000Z,createdBy.aj709@example.com,2002-12-23T00:00:00.000Z,modifiedBy.aj709@example.com
-12846827-a20a-492b-acc0-f19beb785527,17691706-f7c1-4d47-9070-5388d02957c8,45,2020-07-28T00:00:00.000Z,createdBy.aj70a@example.org,2019-11-12T00:00:00.000Z,modifiedBy.aj70a@example.com
-12846828-935a-4323-b529-f9653af71825,35646109-8985-4e1a-8584-c26810a8c75f,90,2003-06-27T00:00:00.000Z,createdBy.24egy@example.org,2007-10-06T00:00:00.000Z,modifiedBy.24egy@example.org
-12846828-935a-4323-b529-f9653af71825,35646117-3db7-4ee9-b626-a28dc24908e7,96,2006-07-29T00:00:00.000Z,createdBy.24egz@example.org,2013-01-31T00:00:00.000Z,modifiedBy.24egz@example.com
-12846829-4ffd-4526-b1e6-8f2b9ce2fcb1,15134624-8252-467c-b7b1-2b60f6dc4522,63,2002-09-24T00:00:00.000Z,createdBy.90dy8@example.net,2021-02-05T00:00:00.000Z,modifiedBy.90dy8@example.net
-12846829-4ffd-4526-b1e6-8f2b9ce2fcb1,15134625-85ea-4409-aeec-2daea50c05aa,30,2023-10-06T00:00:00.000Z,createdBy.90dy9@example.net,2012-04-01T00:00:00.000Z,modifiedBy.90dy9@example.org
+book_ID,ID,number,title,pages,createdAt,createdBy,modifiedAt,modifiedBy
+12846827-a20a-492b-acc0-f19beb785527,82575524-3164-4412-8e77-82bc7d36eb50,84,title-8257552,58,2011-06-10T00:00:00.000Z,createdBy.4wzkg@example.net,2008-08-22T00:00:00.000Z,modifiedBy.4wzkg@example.org
+12846828-935a-4323-b529-f9653af71825,82575535-7c78-4a12-a9d1-92c266651e48,45,title-8257553,18,2017-07-01T00:00:00.000Z,createdBy.4wzkh@example.org,2013-08-04T00:00:00.000Z,modifiedBy.4wzkh@example.org
+12846829-4ffd-4526-b1e6-8f2b9ce2fcb1,80213492-ff69-4f9c-8535-f50d68d9b867,100,title-8021349,35,2012-11-20T00:00:00.000Z,createdBy.4rxb9@example.net,2016-09-29T00:00:00.000Z,modifiedBy.4rxb9@example.org
+12846829-4ffd-4526-b1e6-8f2b9ce2fcb1,80213503-2d17-4b69-81b8-819d6c0ddf25,32,title-8021350,26,2019-10-25T00:00:00.000Z,createdBy.4rxba@example.com,2001-05-22T00:00:00.000Z,modifiedBy.4rxba@example.org

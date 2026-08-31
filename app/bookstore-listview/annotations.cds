@@ -5,27 +5,17 @@ annotate service.Books with @(
         Data : [
             {
                 $Type : 'UI.DataField',
-                Label : 'title',
-                Value : title,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'genre',
-                Value : genre,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'publishedAt',
-                Value : publishedAt,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'pages',
+                Label : 'Pages',
                 Value : pages,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'price',
+                Label : 'PublishedAt',
+                Value : publishedAt,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'Price',
                 Value : price,
             },
         ],
@@ -36,6 +26,18 @@ annotate service.Books with @(
             ID : 'GeneratedFacet1',
             Label : 'General Information',
             Target : '@UI.FieldGroup#GeneratedGroup',
+        },
+        {
+            $Type : 'UI.ReferenceFacet',
+            Label : 'Entry Info',
+            ID : 'AdministrationInfo',
+            Target : '@UI.FieldGroup#AdministrationInfo',
+        },
+        {
+            $Type : 'UI.ReferenceFacet',
+            Label : 'Chapters',
+            ID : 'Chapters',
+            Target : 'chapters/@UI.LineItem#Chapters',
         },
     ],
     UI.LineItem : [
@@ -72,6 +74,40 @@ annotate service.Books with @(
     UI.SelectionFields : [
         price,
     ],
+    UI.HeaderInfo : {
+        TypeName : 'Book',
+        TypeNamePlural : 'Books',
+        Title : {
+            $Type : 'UI.DataField',
+            Value : title,
+        },
+        TypeImageUrl : 'sap-icon://course-book',
+        Description : {
+            $Type : 'UI.DataField',
+            Value : genre,
+        },
+    },
+    UI.FieldGroup #AdministrationInfo : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Value : createdAt,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : createdBy,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : modifiedAt,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : modifiedBy,
+            },
+        ],
+    },
 );
 
 annotate service.Books with {
@@ -95,4 +131,24 @@ annotate service.Books with {
 annotate service.Books with {
     price @Common.Label : 'Price'
 };
+
+annotate service.Chapters with @(
+    UI.LineItem #Chapters : [
+        {
+            $Type : 'UI.DataField',
+            Value : book.chapters.title,
+            Label : 'title',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : book.chapters.pages,
+            Label : 'pages',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : book.chapters.number,
+            Label : 'number',
+        },
+    ]
+);
 
