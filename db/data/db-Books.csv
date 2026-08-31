@@ -1,6 +1,4 @@
-ID,title,author_ID,createdAt,createdBy,modifiedAt,modifiedBy
-95426896-4743-46ea-9127-281e0f56816a,title-954268,3044790d-2354-459d-b4b1-abe059370a72,2005-11-21T00:00:00.000Z,createdBy.kgbg@example.com,2004-05-05T00:00:00.000Z,modifiedBy.kgbg@example.com
-954269ab-4a72-4760-81a0-22158bd4ec53,title-954269,3044790d-2354-459d-b4b1-abe059370a72,2006-07-04T00:00:00.000Z,createdBy.kgbh@example.com,2009-06-29T00:00:00.000Z,modifiedBy.kgbh@example.com
-95427084-a70d-4e70-87b8-e9dc0a95793d,title-954270,3044790d-2354-459d-b4b1-abe059370a72,2003-10-10T00:00:00.000Z,createdBy.kgbi@example.org,2013-03-17T00:00:00.000Z,modifiedBy.kgbi@example.com
-954271e4-027a-4eb5-a1dc-6834a8a1e711,title-954271,3044790d-2354-459d-b4b1-abe059370a72,2005-03-17T00:00:00.000Z,createdBy.kgbj@example.org,2001-06-04T00:00:00.000Z,modifiedBy.kgbj@example.net
-9542724d-acbc-4db6-afe7-e6ea3e91d97d,title-954272,3044790d-2354-459d-b4b1-abe059370a72,2003-08-01T00:00:00.000Z,createdBy.kgbk@example.org,2004-02-10T00:00:00.000Z,modifiedBy.kgbk@example.net
+ID,title,author_ID,genre,publishedAt,pages,price,createdAt,createdBy,modifiedAt,modifiedBy
+12846827-a20a-492b-acc0-f19beb785527,title-12846827,41555686-51b2-42fd-b19f-beeb7e310c00,77,2002-12-09,100,6656783.15,2013-08-05T00:00:00.000Z,createdBy.7ncob@example.org,2022-09-11T00:00:00.000Z,modifiedBy.7ncob@example.net
+12846828-935a-4323-b529-f9653af71825,title-12846828,41555686-51b2-42fd-b19f-beeb7e310c00,95,2014-09-13,20,7650146.16,2008-04-04T00:00:00.000Z,createdBy.7ncoc@example.com,2004-12-17T00:00:00.000Z,modifiedBy.7ncoc@example.net
+12846829-4ffd-4526-b1e6-8f2b9ce2fcb1,title-12846829,41555686-51b2-42fd-b19f-beeb7e310c00,70,2018-01-17,71,9688890.4,2010-03-02T00:00:00.000Z,createdBy.7ncod@example.net,2018-10-24T00:00:00.000Z,modifiedBy.7ncod@example.com
