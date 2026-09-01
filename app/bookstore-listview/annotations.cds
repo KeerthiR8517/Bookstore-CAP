@@ -5,6 +5,16 @@ annotate service.Books with @(
         Data : [
             {
                 $Type : 'UI.DataField',
+                Value : title,
+                Label : 'title',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : genre,
+                Label : 'genre',
+            },
+            {
+                $Type : 'UI.DataField',
                 Label : 'Pages',
                 Value : pages,
             },
