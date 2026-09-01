@@ -21,7 +21,7 @@ entity Books : cuid, managed {
 
 }
 
-entity genres { //custum drop-down
+entity genres {         //custum drop-down
     key code        : Genre;
         description : String;
 
@@ -35,8 +35,8 @@ type Genre : String enum {
     HIS = 'History';
     BIO = 'Biography';
     ROM = 'Romance';
-    THR = 'Thriller';
-    MYS = 'Mystery';
+    THR = 'Thriller'; 
+    MYS = 'Mystery'; 
     FAN = 'Fantasy';
 }
 
