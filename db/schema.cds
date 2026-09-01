@@ -9,10 +9,10 @@ namespace db;
 entity Books : cuid, managed {
     title       : String;
     author      : Association to Authors; // managed Association
-    genre       : Integer;
+    genre       : Association to genres;
     publishedAt : Date;
     pages       : Integer;
-    currency    : Association to Currencies;
+    currency    : Association to Currencies; //value help from sap.common. currencies
     price       : Decimal(9, 2);
     stock       : Integer;
     status      : Association to BookStatus;
@@ -21,7 +21,27 @@ entity Books : cuid, managed {
 
 }
 
-entity BookStatus {
+entity genres { //custum drop-down
+    key code        : Genre;
+        description : String;
+
+}
+
+type Genre : String enum {
+    FIC = 'Fiction';
+    NFI = 'Non-Fiction';
+    SCI = 'Science';
+    TEC = 'Technology';
+    HIS = 'History';
+    BIO = 'Biography';
+    ROM = 'Romance';
+    THR = 'Thriller';
+    MYS = 'Mystery';
+    FAN = 'Fantasy';
+}
+
+
+entity BookStatus { //criticality
     key code        : String(1) enum {
             Available = 'A';
             Low_status = 'L';

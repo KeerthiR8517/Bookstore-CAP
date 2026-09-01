@@ -12,7 +12,7 @@ annotate service.Books with @(
             },
             {
                 $Type : 'UI.DataField',
-                Value : genre,
+                Value : genre_code,
                 Label : 'genre',
             },
             {
@@ -88,7 +88,7 @@ annotate service.Books with @(
         {
             $Type : 'UI.DataField',
             Label : 'Genre',
-            Value : genre,
+            Value : genre_code,
         },
         {
             $Type : 'UI.DataField',
@@ -121,7 +121,7 @@ annotate service.Books with @(
         TypeImageUrl : 'sap-icon://course-book',
         Description : {
             $Type : 'UI.DataField',
-            Value : genre,
+            Value : genre_code,
         },
     },
     UI.FieldGroup #AdministrationInfo : {
@@ -235,5 +235,25 @@ annotate service.Books with {
 
 annotate service.Currencies with {
     code @Common.Text : descr
+};
+
+annotate service.Books with {
+    genre @(
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'GenersVH',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : genre_code,
+                    ValueListProperty : 'code',
+                },
+            ],
+        },
+        Common.ValueListWithFixedValues : true,
+)};
+
+annotate service.GenersVH with {
+    code @Common.Text : description
 };
 
