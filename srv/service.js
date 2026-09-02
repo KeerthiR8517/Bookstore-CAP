@@ -1,8 +1,37 @@
+const { Genre } = require('#cds-models/db')
 const cds = require('@sap/cds')
 
 module.exports = class BookstoreService extends cds.ApplicationService { init() {
 
-  const { Books, Authors, GenersVH, BookStatus, Chapters } = cds.entities('BookstoreService')
+  const { Books} = cds.entities('BookstoreService')
+
+  this.on('addstock', Books, async(req)=>{
+    const bookId=req.params[0].ID
+    await UPDATE(Books)
+    .set({stock:{'+=': 1}})
+    .where ({ID: bookId})
+  })
+
+   this.on('changePublishDate', Books, async(req)=>{
+    const bookId=req.params[0].ID
+    // console.log(req.data)
+    const newDate =req.data.newDate
+    await UPDATE(Books)
+    .set({publishedAt:newDate})
+    .where ({ID: bookId})
+
+  })
+
+
+   this.on('changeStatus', Books, async(req)=>{
+    const bookId=req.params[0].ID
+    // console.log(req.data)
+    const newStatus =req.data.newStatus
+    await UPDATE(Books)
+    .set({status_code:newStatus})
+    .where ({ID: bookId})
+
+  })
 
   this.before (['READ'], Books, async (req) => {
     console.log('Before Books', req.data)
@@ -14,9 +43,9 @@ this.on('READ', Books, async(req,next)=>{
 
   this.after ('READ', Books, async (books, req) => {
     for(const book of books){
-      if(book.genre_code==='Tech'){
+      if(book.genre_code === 'SCI'){
         book.price=book.price * 0.8
-        book.title= 'Dicount today!! Tech book'
+    
       }
     }
     console.log('After READ')

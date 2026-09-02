@@ -1,4 +1,4 @@
 ID,title,author_ID,genre_code,publishedAt,pages,currency_code,price,stock,status_code,createdAt,createdBy,modifiedAt,modifiedBy
 12846827-a20a-492b-acc0-f19beb785527,title-12846827,41555686-51b2-42fd-b19f-beeb7e310c00,SCI,2002-12-09,100,INR,6656783.15,50,A,2013-08-05T00:00:00.000Z,createdBy.7ncob@example.org,2022-09-11T00:00:00.000Z,modifiedBy.7ncob@example.net
-12846828-935a-4323-b529-f9653af71825,title-12846828,41555686-51b2-42fd-b19f-beeb7e310c00,Art,2014-09-13,20,INR,7650146.16,25,L,2008-04-04T00:00:00.000Z,createdBy.7ncoc@example.com,2004-12-17T00:00:00.000Z,modifiedBy.7ncoc@example.net
-12846829-4ffd-4526-b1e6-8f2b9ce2fcb1,title-12846829,41555686-51b2-42fd-b19f-beeb7e310c00,Tech,2018-01-17,71,INR,9688890.40,30,U,2010-03-02T00:00:00.000Z,createdBy.7ncod@example.net,2018-10-24T00:00:00.000Z,modifiedBy.7ncod@example.com
+12846828-935a-4323-b529-f9653af71825,title-12846828,41555686-51b2-42fd-b19f-beeb7e310c00,SCI,2014-09-13,20,INR,7650146.16,25,L,2008-04-04T00:00:00.000Z,createdBy.7ncoc@example.com,2004-12-17T00:00:00.000Z,modifiedBy.7ncoc@example.net
+12846829-4ffd-4526-b1e6-8f2b9ce2fcb1,title-12846829,41555686-51b2-42fd-b19f-beeb7e310c00,TEC,2018-01-17,71,INR,9688890.40,30,U,2010-03-02T00:00:00.000Z,createdBy.7ncod@example.net,2018-10-24T00:00:00.000Z,modifiedBy.7ncod@example.com
