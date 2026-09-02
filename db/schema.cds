@@ -3,6 +3,7 @@ using {
     managed,
     sap.common.Currencies
 } from '@sap/cds/common';
+using {Attachments} from '@cap-js/attachments';
 
 namespace db;
 
@@ -21,7 +22,7 @@ entity Books : cuid, managed {
 
 }
 
-entity genres {         //custum drop-down
+entity genres { //custum drop-down
     key code        : Genre;
         description : String;
 
@@ -35,8 +36,8 @@ type Genre : String enum {
     HIS = 'History';
     BIO = 'Biography';
     ROM = 'Romance';
-    THR = 'Thriller'; 
-    MYS = 'Mystery'; 
+    THR = 'Thriller';
+    MYS = 'Mystery';
     FAN = 'Fantasy';
 }
 
@@ -60,9 +61,15 @@ entity BookStatus { //criticality
 // }
 
 entity Authors : cuid, managed {
-    name  : String;
-    books : Association to many Books
-                on books.author = $self; // unmanaged Association
+    name        : String;
+    filename    : String;
+    fileType    : String      @Core.IsMediaType;
+    content     : LargeBinary @Core.MediaType                  : fileType
+                              // @Core.AcceptableMediaTypes       : ['application/pdf']  //only pdf files
+                              @Core.ContentDisposition.Filename: filename;
+    Attachment : Composition of many Attachments;
+    books       : Association to many Books
+                      on books.author = $self; // unmanaged Association
 
 }
 
